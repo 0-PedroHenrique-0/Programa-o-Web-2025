@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="marca">Login</div>
+                <nav>
+                    <a href="index.html">Voltar para home</a>
+                </nav>
+        </div>
+    </header>
+    <main class="container">
+        <form>
+            <fieldset>
+                <legend>Acesso</legend>
+                <label for="txtUsuario">Usuario</label>
+                <input type="text" id="txtUsuario"
+                placeholder="Digite seu nome" required minlength="3">
+                <label for="txtSenha">Senha</label>
+                <input type="password" id="txtSenha"
+                placeholder="Digite sua senha" required minlength="4"
+                maxlength="8">
+
+                <label style="margin-top: 10px;">
+                <input type="checkbox" id="chkLembrar">
+                    manter conectado
+                </label>
+
+                <div class="acaobotao">
+                    <button type="submit">Entrar</button>
+                    <a class="link" href="index.html">Cancelar</a>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>&copy; 2025; Created by ph</small>
+        </div>
+    </footer>
+</body>
+</html>
