@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo DOM — Formulário Básico</title>
+    <!-- Importa o CSS externo -->
+    <link rel="stylesheet" href="css/estilo.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Formulário</h1>
+
+        <!--
+      Se selecionar "Nome": o rótulo muda para "Razão Social".
+      Se selecionar "Outros": aparece uma caixa de texto extra.
+    -->
+        <div class="campos">
+            <label for="tipoCampo">Tipo de identificação</label>
+            <select id="tipoCampo">
+                <option value="" selected>— selecione —</option>
+                <option value="nome">Nome</option>
+                <option value="cpf-cnpj">CPF/CNPJ</option>
+                <option value="outros">Outros</option>
+            </select>
+        </div>
+
+
+        <!-- Campo principal (rótulo será alterado via JS) -->
+        <div class="campos">
+            <label for="campoPrincipal" id="labelPrincipal">Nome</label>
+            <input id="campoPrincipal" type="text" placeholder="Digite aqui…" />
+        </div>
+
+        <!-- Campo extra (aparece apenas se "Outros" for selecionado) -->
+        <div class="campos hidden" id="grupoOutros">
+            <label for="descricaoOutros">Descreva o tipo (Outros)</label>
+            <input id="descricaoOutros" type="text" placeholder="Ex.: Passaporte, Registro interno, etc." />
+        </div>
+
+        <div class="actions">
+            <button id="btnEnviar" type="button">Enviar</button>
+            <button id="btnLimpar" type="button" class="secondary">Limpar</button>
+        </div>
+
+        <!-- Feedback preenchido via JS -->
+        <div id="feedback"></div>
+    </main>
+
+    <!-- Importa o JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+
+</html>
